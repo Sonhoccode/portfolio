@@ -17,7 +17,7 @@ const ScrollDown = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 1 }}
-      className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 cursor-pointer"
+      className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 z-20 cursor-pointer"
       onClick={handleScroll}
     >
       <motion.div

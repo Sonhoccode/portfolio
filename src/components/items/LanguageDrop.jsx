@@ -3,7 +3,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
 
-export default function DropLanguage() {
+export default function DropLanguage({ isMobile = false }) {
   const [langOpen, setLangOpen] = useState(false);
   const { t, i18n } = useTranslation("common");
 
@@ -23,33 +23,39 @@ export default function DropLanguage() {
   ];
 
   return (
-    <div className="ml-auto flex items-center relative" data-lang-menu>
+    <div className={`flex items-center relative ${isMobile ? '' : 'ml-auto'}`} data-lang-menu>
       {/* Button kích hoạt */}
       <button
         onClick={() => setLangOpen((v) => !v)}
         type="button"
-        className={`flex items-center gap-1 px-3 py-1 rounded-lg transition-all duration-300
+        className={`flex items-center gap-1 ${isMobile ? 'flex-col' : ''} px-3 py-1 rounded-lg transition-all duration-300
           ${langOpen ? "bg-white/20" : "hover:bg-white/10"} 
           text-gray-900 font-semibold text-sm`}
       >
-        <LanguageIcon sx={{ fontSize: 18 }} className="opacity-70" />
-        <span className="uppercase">{currentLang}</span>
-        <ArrowDropDownIcon
-          className={`transition-transform duration-300 ${langOpen ? "rotate-180" : ""}`}
-        />
+        <LanguageIcon sx={{ fontSize: isMobile ? 24 : 18 }} className="opacity-70" />
+        {isMobile ? (
+          <span className="text-[10px] font-medium uppercase">{currentLang}</span>
+        ) : (
+          <>
+            <span className="uppercase">{currentLang}</span>
+            <ArrowDropDownIcon
+              className={`transition-transform duration-300 ${langOpen ? "rotate-180" : ""}`}
+            />
+          </>
+        )}
       </button>
 
       {/* Menu thả xuống */}
       {langOpen && (
         <aside
-          className="
-            absolute top-[calc(100%+12px)] right-0 z-50
+          className={`
+            absolute ${isMobile ? 'bottom-[calc(100%+12px)] left-1/2 -translate-x-1/2' : 'top-[calc(100%+12px)] right-0'} z-[60]
             min-w-[160px] p-1.5
             rounded-xl border border-white/30
             bg-white/80 backdrop-blur-xl
             shadow-[0_10px_30px_rgba(0,0,0,0.1)]
             animate-in fade-in zoom-in-95 duration-200
-          "
+          `}
         >
           <div className="flex flex-col gap-1">
             {languages.map((lang) => {
