@@ -117,7 +117,7 @@ export default function Profile() {
               >
                 <DownloadButton
                   fileName="CV_CaoSon_Frontend.pdf"
-                  fileUrl="/cv.pdf"
+                  fileUrl="/cv_HoangIchCaoSon.pdf.pdf"
                 />
               </div>
             </div>
@@ -204,7 +204,7 @@ export default function Profile() {
               >
                 <DownloadButton
                   fileName="CV_CaoSon_Frontend.pdf"
-                  fileUrl="/cv.pdf"
+                  fileUrl="/cv_HoangIchCaoSon.pdf.pdf"
                 />
               </div>
             </div>
