@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "todo": {
+      "desc": "Phát triển giao diện người dùng (UI) hiện đại và phản hồi nhanh với ReactJS và TailwindCSS.\nXây dựng hệ thống API Backend mạnh mẽ dựa trên nền tảng Django REST Framework.\nỨng dụng quản lý công việc thông minh, cho phép người dùng tối ưu hóa quy trình làm việc thông qua các thao tác thêm, sửa, xóa và theo dõi trạng thái nhiệm vụ.\nTích hợp Chatbot AI dựa trên luật (Rule-based NLP) giúp hỗ trợ người dùng tương tác và quản lý công việc một cách tự động và linh hoạt."
+    },
+    "portfolio": {
+      "desc": "Trang web cá nhân được thiết kế để giới thiệu kỹ năng, dự án và thông tin liên hệ của tôi. Được xây dựng với React và TailwindCSS, sở hữu giao diện hiện đại và tối ưu hiển thị trên mọi thiết bị."
+    },
+    "nrl": {
+      "desc": "Phát triển giao diện người dùng sử dụng ReactJS + TailwindCSS.\nXây dựng hệ thống API backend bằng Django REST Framework.\nTriển khai thuật toán Parser tùy chỉnh (Python Regex & python-docx) để tự động trích xuất dữ liệu sinh viên từ các tệp Word không theo chuẩn.\nThiết lập xử lý CORS thông qua middleware tùy chỉnh để đảm bảo giao tiếp an toàn giữa frontend và backend.\nTích hợp Cloudflare Turnstile để bảo vệ API khỏi các truy cập trái phép và lạm dụng.\nTriển khai hệ thống lên môi trường thực tế sử dụng Vercel và Fly.io."
+    },
+    "hotel": {
+      "desc": "Xây dựng giao diện người dùng dựa trên thành phần (component-based) và phản hồi nhanh (responsive) bằng ReactJS + TailwindCSS, tập trung vào khả năng sử dụng và cấu trúc UI dễ bảo trì.\nTích hợp frontend với các hệ thống RESTful API, xử lý luồng dữ liệu phức tạp và quản lý trạng thái (state management).\nThiết kế kiến trúc monorepo, phân tách rõ ràng giữa AI Service, Backend API và các thành phần Frontend.\nPhát triển hệ thống RAG dưới dạng một microservice độc lập để xử lý các truy vấn thông minh và giảm bớt gánh nặng logic cho hệ thống cốt lõi.\nXây dựng chatbot AI chuyên biệt sử dụng mô hình Vistral, được tối ưu hóa cho tiếng Việt, đảm bảo tính gọn nhẹ và tiết kiệm tài nguyên hệ thống."
+    }
+  }
+}

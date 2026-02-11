@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "todo": {
+      "desc": "Developed a modern and responsive User Interface (UI) using ReactJS and TailwindCSS.\nBuilt a robust Backend API system powered by the Django REST Framework.\nA smart task management application that enables users to optimize their workflow through seamless task creation, editing, deletion, and status tracking.\nIntegrated a Rule-based NLP AI Chatbot to provide automated support and flexible task management for users."
+    },
+    "portfolio": {
+      "desc": "A personal website designed to showcase my skills, projects, and contact information. Built with React and TailwindCSS, featuring a modern interface optimized for all devices."
+    },
+    "nrl": {
+      "desc": "Developed user interfaces using ReactJS + TailwindCSS.\nBuilt backend API systems with Django REST Framework.\nImplemented a custom Parser algorithm (Python Regex & python-docx) to automatically extract student data from non-standardized Word documents.\nConfigured custom CORS middleware to ensure secure communication between frontend and backend.\nIntegrated Cloudflare Turnstile to protect APIs from unauthorized access and abuse.\nDeployed the system to production environments using Vercel and Fly.io."
+    },
+    "hotel": {
+      "desc": "Built component-based and responsive user interfaces using ReactJS + TailwindCSS, focusing on usability and maintainable UI structure.\nIntegrated frontend with RESTful APIs, handling complex data flow and state management.\nDesigned a monorepo architecture, clearly separating AI Service, Backend API, and Frontend components.\nDeveloped a RAG system as an independent microservice to handle intelligent queries and reduce core system logic.\nBuilt a specialized AI chatbot using the Vistral model, optimized for Vietnamese language, lightweight, and resource-efficient."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "language": {
+    "language": "Language",
+    "icons": {
+      "en": "EN",
+      "vi": "VN"
+    },
+    "en": "English",
+    "vi": "Tiếng Việt"
+  },
+  "Hello": "Hello",
+  "Register": "Register",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Learn" : "Learn"
+}

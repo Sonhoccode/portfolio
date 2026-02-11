@@ -1,0 +1,46 @@
+/* Giữ nguyên logic của bạn, chỉ điều chỉnh độ tương phản để hiển thị được trên mọi nền */
+.download-btn {
+  /* Tăng độ đậm màu để không bị tàng hình trên nền sáng */
+  color: black; /* Đổi từ trắng sang đen nhạt */
+  background: rgba(0, 0, 0, 0.05); /* Nền xám cực nhẹ */
+  
+  padding: 10px 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 8px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Thêm viền nhẹ để định hình nút */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  /* Hiệu ứng gradient giữ nguyên nhưng đổi tông màu phù hợp */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.02),
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.1)
+  );
+  box-shadow: 0 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  color: #000;
+}
+
+.download-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.download-icon {
+  display: block;
+  fill: currentColor; /* Quan trọng để SVG nhận màu từ .download-btn */
+}

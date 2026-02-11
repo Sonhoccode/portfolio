@@ -1,0 +1,18 @@
+{
+  "language": {
+    "language": "Ngôn ngữ",
+    "icons": {
+      "en": "EN",
+      "vi": "VN"
+    },
+    "en": "English",
+    "vi": "Tiếng Việt"
+  },
+  "Hello": "Xin chào",
+  "Register": "Đăng ký",
+  "Login": "Đăng nhập",
+  "Logout": "Đăng xuất",
+  "Profile": "Hồ sơ",
+  "Learn" : "Học"
+  
+}

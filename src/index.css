@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-gradient-start: #e3f2fd;
+  --bg-gradient-end: #fce4ec;
+  
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  
+  --accent-color: #3d405b;
+  --accent-hover: #2c2e44;
+  
+  --border-color: rgba(0, 0, 0, 0.1);
+  --divider-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Apply theme to body */
+body {
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  background-attachment: fixed;
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%; 
+  height: auto !important; 
+}
+
+#root > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bg-custom {
+  padding: 0 128px !important;
+  z-index: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+  font-family: inherit !important;
+  font-weight: inherit;
+}
+
+.text-type__cursor {
+  margin-left: 0.1rem;
+  display: inline-block;
+  opacity: 1;
+  font-family: sans-serif;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ghi đè khoảng cách mặc định của AOS */
+[data-aos="fade-down-job"] {
+  transform: translate3d(0, -25px, 0) !important; /* Thay vì -100px */
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-down-job"].aos-animate {
+  transform: translate3d(0, 0, 0) !important;
+  opacity: 1;
+}
+[data-aos="fade-right-introduction"] {
+  transform: translate3d(-30px, 0, 0) !important; /* Thay vì -100px */
+  opacity: 0;
+  transition-property: transform, opacity;
+  will-change: transform, opacity;
+}
+
+[data-aos="fade-right-introduction"].aos-animate {
+  transform: translate3d(0, 0, 0) !important;
+  opacity: 1;
+}
+
+[data-aos="fade-right-dad"] {
+  transform: translate3d(-30px, 0, 0) !important; /* Thay vì -100px */
+  opacity: 0;
+  transition-property: transform, opacity;
+  will-change: transform, opacity;
+}
+[data-aos="fade-right-dad"].aos-animate {
+  transform: translate3d(0, 0, 0) !important;
+  opacity: 1;
+}
+
+[data-aos="fade-down-child"] {
+  transform: translate3d(0, -25px, 0) !important; /* Thay vì -100px */
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-down-child"].aos-animate {
+  transform: translate3d(0, 0, 0) !important;
+  opacity: 1;
+}
+
+/* Ghi đè lại class .btn-project để dùng trực tiếp cho thẻ <a> */
+.btn-project {
+  display: inline-flex;    /* Dùng flex để căn giữa nội dung dễ dàng */
+  align-items: center;
+  justify-content: center;
+  position: relative;      /* Làm gốc tọa độ cho dấu » */
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: #FFFFFF !important; /* Đảm bảo không bị màu xanh của link đè lên */
+  text-decoration: none !important;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px 20px;      /* Padding cân đối */
+  min-width: 140px;        /* Đủ rộng cho "Source code" */
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  white-space: nowrap;     /* TUYỆT ĐỐI KHÔNG NHẢY DÒNG */
+  overflow: visible;
+}
+
+/* Tạo dấu mũi tên bằng pseudo-element của chính thẻ a */
+.btn-project:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  right: 5px;             /* Vị trí ban đầu khi ẩn */
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+/* Hiệu ứng khi Hover */
+.btn-project:hover {
+  padding-right: 35px;     /* Đẩy khoảng trống sang phải để nhường chỗ cho mũi tên */
+  padding-left: 15px;      /* Giữ nút cân bằng hơn một chút */
+  background-color: var(--accent-hover);
+}
+
+.btn-project:hover:after {
+  opacity: 1;
+  right: 15px;            /* Vị trí khi hiện ra */
+}
+
+/* Ẩn thanh cuộn nhưng vẫn cho phép cuộn ngang */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
