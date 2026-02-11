@@ -58,7 +58,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="mt-0 md:mt-6 text-base md:text-lg font-normal leading-6 md:leading-8 flex flex-col md:flex-row gap-4 md:gap-4 w-full">
+        <div className="mt-0 md:mt-6 text-base md:text-lg font-normal leading-6 md:leading-8 flex flex-col md:flex-row gap-4 md:gap-4 w-full mobile-aos-disabled">
           <div className="w-full md:w-1/2">
             <div
               data-aos="fade-right-dad"

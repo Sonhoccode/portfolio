@@ -200,3 +200,10 @@ html {
     scrollbar-width: none;
   }
 }
+@media (max-width: 768px) {
+  .mobile-aos-disabled [data-aos], .mobile-aos-disabled[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
