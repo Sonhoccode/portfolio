@@ -21,7 +21,7 @@ const ScrollDown = () => {
       onClick={handleScroll}
     >
       <motion.div
-        animate={{ y: [0, 15, 0] }} // Tăng biên độ nhảy lên một chút cho 2 mũi tên
+        animate={{ y: [0, 15, 0] }} 
         transition={{
           duration: 1.2,
           repeat: Infinity,
@@ -33,12 +33,11 @@ const ScrollDown = () => {
           {t("next")}
         </span>
 
-        {/* SVG với 2 mũi tên xếp chồng */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          strokeWidth={2.5} // Nét vẽ đậm hơn một chút cho ngầu
+          strokeWidth={2.5} 
           stroke="currentColor"
           className="w-8 h-10 text-black transition-colors"
         >
@@ -48,7 +47,6 @@ const ScrollDown = () => {
             strokeLinejoin="round"
             d="M19.5 5.25l-7.5 7.5-7.5-7.5"
           />
-          {/* Mũi tên dưới - dịch chuyển tọa độ y xuống 6 đơn vị */}
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
